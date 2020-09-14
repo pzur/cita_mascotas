@@ -1,4 +1,6 @@
 import React from 'react';
+import ProTypes from 'prop-types';
+
 const Cita = ({ita,eliminar}) => {
     const{mascota,propietario,fecha,hora,sintomas}=ita;
     return ( 
@@ -17,6 +19,11 @@ const Cita = ({ita,eliminar}) => {
             </button>
         </div>
      );
+}
+
+Cita.proTypes = {
+    ita: ProTypes.object.isRequired,
+    eliminar: ProTypes.func.isRequired
 }
  
 export default Cita;
